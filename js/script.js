@@ -20,7 +20,7 @@ function calculate() {
   const base = parseInt(document.getElementById("base").value)
   const top = parseInt(document.getElementById("top").value)
   // process
-  const area = (((base + top) / 2) * height)
+  const area = ((base + top) / 2) * height
   // output
   document.getElementById("area").innerHTML = "Area is: " + area + " cm²"
 }
