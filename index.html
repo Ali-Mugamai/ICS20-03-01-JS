@@ -11,9 +11,9 @@
     <title>GitHub page as PWA template</title>
     <link
       rel="canonical"
-      href="https://Ali-Mugamai.github.io/ICS20-02-05-JS/"
+      href="https://Ali-Mugamai.github.io/ICS20-03-01-JS/"
     />
-    <link rel="manifest" href="/ICS20-02-05-JS/manifest.webmanifest" />
+    <link rel="manifest" href="/ICS20-03-01-JS/manifest.webmanifest" />
     <link rel="stylesheet" href="./css/style.css" />
     <!--- None blocking for Lighthouse report --->
     <!--- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously --->
@@ -53,45 +53,62 @@
       <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
           <div class="mdl-layout__header-row">
-            <span class="mdl-layout-title">Salary program with JS</span>
+            <span class="mdl-layout-title">area of a trapezoid with JS</span>
           </div>
         </header>
         <main class="mdl-layout__content">
           <table>
             <tr>
               <th>
-                <h2>enter the required information down below</h2>
+                <h2>(((a+b)/2)h)</h2>
               </th>
             </tr>
           </table>
+          <img src="/images/trapezoid.png" alt="image of a trapezoid" style="width:128px;height:128px;">
           <!-- Simple Textfield -->
           <form action="#">
-            <p>hours worked</p>
+            <p>a (top of trapezoid)</p>
             <div class="mdl-textfield mdl-js-textfield">
               <input
                 class="mdl-textfield__input"
                 type="text"
                 pattern="-?[0-9]*(\.[0-9]+)?"
-                id="hours_worked"
+                id="top"
               />
-              <label class="mdl-textfield__label" for="hours_worked"
-                >hours ...</label
+              <label class="mdl-textfield__label" for="top"
+                >top of trapezoid ...</label
               >
               <span class="mdl-textfield__error">Input is not a number!</span>
             </div>
           </form>
           <!-- Numeric Textfield -->
           <form action="#">
-            <p>hourly rate</p>
+            <p>b (base)</p>
             <div class="mdl-textfield mdl-js-textfield">
               <input
                 class="mdl-textfield__input"
                 type="text"
                 pattern="-?[0-9]*(\.[0-9]+)?"
-                id="hourly_rate"
+                id="base"
               />
-              <label class="mdl-textfield__label" for="hourly_rate"
-                >hourly rate ...</label
+              <label class="mdl-textfield__label" for="base"
+                >base of trapezoid ...</label
+              >
+              <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
+          </form>
+          <!-- Numeric Textfield -->
+          <form action="#">
+            <p>h (height)</p>
+            <div class="mdl-textfield mdl-js-textfield">
+              <input
+                class="mdl-textfield__input"
+                type="text"
+                pattern="-?[0-9]*(\.[0-9]+)?"
+                id="height"
+              />
+              <label class="mdl-textfield__label" for="height"
+                >height of trapezoid ...</label
               >
               <span class="mdl-textfield__error">Input is not a number!</span>
             </div>
@@ -102,12 +119,10 @@
             class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
             onclick="calculate()"
           >
-            pay
+            calculate
           </button>
           <br />
-          <div id="answers">
-            <div id="pay"></div>
-            <div id="governmentstake"></div>
+          <div id="area">
           </div>
         </main>
       </div>

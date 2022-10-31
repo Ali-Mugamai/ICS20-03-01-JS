@@ -5,30 +5,22 @@
 // This file contains the JS functions for index.html
 
 "use strict"
-/**
- * Check servie worker.
- */
+
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS20-02-05-JS/sw.js", {
-    scope: "/ICS20-02-05-JS/",
+  navigator.serviceWorker.register("/ICS20-03-01-JS/sw.js", {
+    scope: "/ICS20-03-01-JS/",
   })
 }
 /**
  * This function calculates area and perimeter of rectangle.
  */
-
 function calculate() {
   // input
-  const hours = parseInt(document.getElementById("hours_worked").value)
-  const rate = parseInt(document.getElementById("hourly_rate").value)
+  const height = parseInt(document.getElementById("height").value)
+  const base = parseInt(document.getElementById("base").value)
+  const top = parseInt(document.getElementById("top").value)
   // process
-  const pay = hours * rate * 0.82
-  const taxes = hours * rate * 0.18
+  const area = (((base + top) / 2) * height)
   // output
-  document.getElementById("pay").innerHTML = `Your pay will be: $ ${pay.toFixed(
-    2
-  )}`
-  document.getElementById(
-    "governmentstake"
-  ).innerHTML = `Your pay will be: $ ${taxes.toFixed(2)}`
+  document.getElementById("area").innerHTML = "Area is: " + area + " cm²"
 }
